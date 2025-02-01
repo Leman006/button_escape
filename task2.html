@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="adinizi daxil edin" type="text" id="name"/>
+    <label><input name="sex" type="radio" id="man"/>Kisi</label>
+    <label><input name="sex" type="radio" id="woman"/>Qadin</label>
+    <button id="btn">ok</button> 
+    <h3 id="answer"></h3>
+
+    <script>
+        let name= document.getElementById("name")
+        let man= document.getElementById("man")
+        let woman= document.getElementById("woman")
+        let btn= document.getElementById("btn")
+        let answer= document.getElementById("answer")
+        btn.onclick= function() {
+            if (man.checked){
+                answer.innerHTML="Salam " + name.value + " bey, necesiniz?"
+            }
+            else{
+                answer.innerHTML="Salam " + name.value + " xanim, necesiniz?"
+            }
+        }
+    </script>
+</body>
+</html>

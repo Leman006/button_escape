@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Escape</title>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+
+    button {
+    padding: 10px 20px;
+    font-size: 18px;
+    position: absolute;
+    transition: background-color 0.2s ease;
+    }
+</style>
+</head>
+<body id="body">
+    <button id="btn">Kick me!</button>
+
+<script>
+    const btn = document.getElementById('btn');
+    const body = document.getElementById('body');
+
+    btn.addEventListener('mouseenter', () => {
+        const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+        btn.style.left = `${x}px`;
+        btn.style.top = `${y}px`;
+        const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+        body.style.backgroundColor = randomColor;
+    });
+</script>
+
+</body>
+</html>

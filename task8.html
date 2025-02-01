@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button id="bold">B</button>
+    <button id="italic">I</button>
+    <button id="under">U</button>
+    <p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, praesentium.</p>
+
+    <script>
+        let bold = document.getElementById("bold")
+        let italic = document.getElementById("italic")
+        let under = document.getElementById("under")
+        let text = document.getElementById("text")
+
+        bold.onclick= function(){
+            if(text.style.fontWeight==""){
+                text.style.fontWeight="bold"
+            }
+            else{
+                text.style.fontWeight=""
+            }
+        }
+        italic.onclick= function(){
+            if(text.style.fontStyle=="normal"){
+                text.style.fontStyle="italic"
+            }
+            else{
+                text.style.fontWeight="normal"
+            }
+        }
+        under.onclick= function(){
+            if(text.style.textDecoration=="none"){
+                text.style.textDecoration="underline"
+            }
+            else{
+                text.style.textDecoration="none"
+            }
+        }
+    </script>
+</body>
+</html>

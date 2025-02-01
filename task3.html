@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>0-1kg(4.9$)</article>
+    <article>1-5kg(4.5$)</article>
+    <article>5kg+(4.1$)</article>
+    <input type="number" id="num">
+    <button id="btn">Hesabla</button>
+    <h3 id="dollar"></h3>
+    <h3 id="manat"></h3>
+
+    <script>
+        let num= document.getElementById("num")
+        let btn= document.getElementById("btn")
+        let dollar= document.getElementById("dollar")
+        let manat= document.getElementById("manat")
+
+        btn.onclick = function(){
+            if (num.value<=1){
+                price=num.value*4.9
+            }
+            else if(num.value<=5){
+                price=num.value*4.5
+            }
+            else{
+                price=num.value*4.1
+            }
+            let manatPrice = price * 1.7;
+            let dollarWhole = Math.floor(price);
+            let dollarFraction = Math.round((price - dollarWhole) * 100);
+            let manatWhole = Math.floor(manatPrice);
+            let manatFraction = Math.round((manatPrice - manatWhole) * 100);
+            dollar.innerHTML = `${dollarWhole} dollar ${dollarFraction} sent`;
+            manat.innerHTML = `${manatWhole} manat ${manatFraction} qepik`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="btn">toggle text</button>
+    <h3 id="demo">Hello Javascript</h3>
+
+    <script>
+        const button = document.getElementById('btn');
+        const demo = document.getElementById('demo');
+        button.onclick=function(){
+            if (demo.innerText === "Hello Javascript") {
+                demo.innerText = "";
+            } 
+            else {
+                demo.innerText = "Hello Javascript";
+            }
+        };
+    </script> -->
+
+    <!-- <input id="num" type="number">
+    <button id="btn">Tap</button>
+    <h3 id="demo"></h3>
+
+    <script>
+        let num=document.getElementById('num')
+        let btn=document.getElementById('btn')
+        let demo=document.getElementById('demo')
+        let a=Math.floor(Math.random()*10)
+        btn.onclick= function(){
+            if (+num.value==a.value){
+                demo.innerHTML="duzdu"
+            }
+            else{
+                demo.innerHTML="sehv "+ Math.floor(a)
+            }
+        }
+
+    </script> -->
+
+    <p id="demo">check my facebook</p>
+    
+
+    <script>
+        let demo = document.getElementById('demo')
+        demo.innerHTML=demo.innerHTML.replace("facebook", '<a href="#">facebook</a>')
+    </script>
+</body>
+</html>

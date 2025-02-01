@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square</title>
+    <style>
+        .cell {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .row {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="cells"></div>
+
+<script>
+    let cellsHTML = "";
+
+    for (let row = 0; row < 5; row++) {
+        let rowHTML = "";
+
+        for (let col = 0; col < 5; col++) {
+            if (col < 5 - row) {
+                rowHTML += '<div class="cell" style="background-color: green;"></div>';
+            } else {
+                rowHTML += '<div class="cell" style="background-color: white;"></div>';
+            }
+        }
+
+        cellsHTML += `<div class="row">${rowHTML}</div>`;
+    }
+
+    document.getElementById("cells").innerHTML = cellsHTML;
+</script>
+
+</body>
+</html>

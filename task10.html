@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <span>!</span>
+    <button id="btn">=</button>
+    <h3 id="answer"></h3>
+
+    <script>
+        let num = document.getElementById("num");
+        let btn = document.getElementById("btn");
+        let answer = document.getElementById("answer");
+
+        btn.onclick = function() {
+            let k = 1;
+            let number = +num.value;
+            answer.innerHTML = '';
+
+            if (number == 0) {
+                answer.innerHTML = `0! = 1`;
+            } else {
+                for (let i = 1; i <= number; i++) {
+                    k *= i;
+                    answer.innerHTML += (i == 1) ? `${i}` : ` x ${i}`;
+                }
+                answer.innerHTML += ` = ${k}`;
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

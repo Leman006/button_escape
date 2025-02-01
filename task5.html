@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 2px solid brown;
+            border-radius: 10px;
+            width: 400px;
+            padding: 20px;
+        }
+    label{
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+    }
+    input{
+        padding: 10px;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid brown;
+    }
+    span{
+        text-transform: uppercase;
+        font: 500 1em arial;
+    }
+    button{
+        background: brown;
+        border: none;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        font: 500 1em arial;
+        text-transform: uppercase;
+    }
+
+    i{
+      display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="ad">
+        <span> emailinizi girin</span>
+        <input id="ad" name="ad" type="text" />
+        <em id="emailerror" style="display:none;">xeta</em>
+      </label>
+      <label for="pass">
+        <span> passwordunuzu girin</span>
+        <input id="pass" name="pass" type="password" />
+        <em id="passerror" style="display:none;">xeta</em>
+      </label>
+      <button id="login">daxil ol</button>
+    </form>
+
+    <script>
+        let correct_email = 'amil123@gmail.com'
+        let correct_password = '12345'
+        let ad = document.getElementById('ad')
+        let pass = document.getElementById('pass')
+        let emailerror = document.getElementById('emailerror')
+        let passerror = document.getElementById('passerror')
+    
+        const login = document.getElementById("login")
+        login.onclick = function checkLogin(event){
+            event.preventDefault()
+            emailerror.style.display = 'none'
+            passerror.style.display = 'none'
+            if(ad.value!=correct_email){
+                emailerror.style.display = 'block'
+            }
+            if(pass.value!=correct_password){
+                passerror.style.display = 'block'
+            }
+        }
+    </script>
+  </body>
+</html>
