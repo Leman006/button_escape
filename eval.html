@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="answer()">answer</button>
+    <h1 id="h1"></h1>
+
+
+    <script>
+        let num1=document.getElementById('num1')
+        let num2=document.getElementById('num2')
+        function answer(value){
+            h1.innerHTML=Number(num1.value)+Number(num2.value)
+        }
+    </script> -->
+
+    <input type="number" id="num1">
+    <select  id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2">
+    <button id="btn">=</button>
+    <h3 id="result"></h3>
+
+    <script>
+        let num1=document.getElementById('num1')
+        let num2=document.getElementById('num2')
+        let btn=document.getElementById('btn')
+        let result=document.getElementById('result')
+        let operator = document.getElementById('operator')
+        btn.onclick = function (){
+            result.innerHTML= eval(num1.value + operator.value + num2.value)
+        }
+        
+    </script>
+</body>
+</html>

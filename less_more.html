@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="number" id="num1">
+    <button id="btn">?</button>
+    <input type="number" id="num2">
+
+    <script>
+        let num1=document.getElementById("num1")
+        let num2=document.getElementById("num2")
+        let btn=document.getElementById("btn")
+        btn.onclick= function() {
+            if(+num1.value<+num2.value) {
+                btn.innerHTML="<"
+            }
+            else if(num1.value==num2.value){
+                btn.innerHTML="="
+            }
+            else{
+                btn.innerHTML=">"
+            }
+        }
+    </script> -->
+
+    <input type="number" name="" id="num">
+    <button id="btn">tap</button>
+
+    <script>
+        let num=document.getElementById("num")
+        let btn=document.getElementById("btn")
+
+        btn.onclick= function(){
+            if(+num.value<10){
+                btn.innerHTML="birreqemli"
+            }
+
+            else if(+num.value<100){
+                btn.innerHTML="ikireqemli"
+            }
+
+            else if(+num.value<1000){
+                btn.innerHTML="ucreqemli"
+            }
+
+            else{
+                btn.innerHTML="coxreqemli"
+            }
+        }
+    </script>
+
+    <!-- <input type="number" id="num">
+    <button id="btn">tap</button>
+    <h3 id="answer"></h3>
+
+    <script>
+        let num=document.getElementById("num")
+        let btn=document.getElementById("btn")
+        let answer=document.getElementById("answer")
+        btn.onclick = function() {
+            if(num.value%2==0){
+                answer.innerHTML= "cut"
+            }
+            else{
+                answer.innerHTML="tek"
+            }
+        }
+    </script> -->
+</body>
+</html>

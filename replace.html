@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leman</title>
+    <style>
+        input, button {
+            padding: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input_1">
+    <button id="button" onclick="buttonClick ()">></button>
+    <input type="text" id="input_2">
+
+    <script>
+        const input_1 = document.getElementById('input_1')
+        const input_2 = document.getElementById('input_2')
+        function buttonClick() {
+            let x = input_1.value
+            input_1.value = input_2.value
+            input_2.value = x
+        }
+    </script>
+</body>
+
+</html>

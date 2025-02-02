@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 30px;
+            border-radius: 30px;
+            border: 1px solid gray;
+            width: 300px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="number" name="" id="num1">
+    <input type="number" name="" id="num2">
+    <input type="number" name="" id="num3">
+    <button id="btn1">cem</button>
+    <button id="btn2">ededi orta</button>
+    <button id="btn3">max</button>
+    <button id="btn4">min</button>
+    <h3 id="result"></h3>
+
+    <script>
+        let num1 = document.getElementById("num1")
+        let num2 = document.getElementById("num2")
+        let num3 = document.getElementById("num3")
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let btn3 = document.getElementById("btn3")
+        let btn4 = document.getElementById("btn4")
+        let result = document.getElementById("result")
+        btn1.onclick = function () {
+            result.innerHTML = +num1.value + +num2.value + +num3.value
+        }
+        btn2.onclick = function () {
+            result.innerHTML = (+num1.value + +num2.value + +num3.value)/3
+        }
+        btn3.onclick = function () {
+            result.innerHTML = Math.max(num1.value, num2.value, num3.value)
+        }
+        btn4.onclick = function () {
+            result.innerHTML = Math.min(num1.value, num2.value, num3.value)
+        }
+    </script> -->
+
+    <div class="card">
+        <h4>Include the color</h4>
+        <input type="text" name="" id="color">
+        <button id="btn">Change the color</button>
+    </div>
+
+    <script>
+        let color=document.getElementById("color")
+
+        btn.onclick= function(){
+            document.body.style.backgroundColor = color.value
+        }
+    </script>
+</body>
+</html>
