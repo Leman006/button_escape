@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <option id="az">A-Z</option>
+        <option id="za">Z-A</option>
+        <option id="bu">Bahadan ucuza</option>
+        <option id="ub">Ucuzdan Bahaya</option>
+    </select>
+    <h3 id="demo"></h3>
+
+    <script>
+        const products = [
+            {
+                name: "iphone 16",
+                price: 2199
+            },
+            {
+                name: "samsung S24",
+                price: 2349
+            },
+            {
+                name:"iphone 16 pro",
+                price:2899
+            }
+        ]
+        let az= document.getElementById("az")
+        let za= document.getElementById("za")
+        let bu= document.getElementById("bu")
+        let ub= document.getElementById("ub")
+        let demo= document.getElementById("demo")
+        az.onclick= function(){
+            // demo.innerHTML=products.sort()
+            const sortedDict = Object.fromEntries(
+            Object.entries(products).sort(([,a],[,b]) => a- b)
+            );
+            console.log(sortedDict);
+        }
+    </script>
+</body>
+</html>

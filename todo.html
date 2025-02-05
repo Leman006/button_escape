@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+</head>
+<body>
+    <input type="text" id="todo">
+    <button id="btn">Add</button>
+    <ul id="todos"></ul>
+
+    <script>
+        let todo=document.getElementById("todo")
+        let todos=document.getElementById("todos")
+        let btn=document.getElementById("btn")
+        let my_array=[]
+
+        btn.onclick= function(){
+            if(todo.value!=""){
+                my_array.push(todo.value)
+            }
+            todo.value=""
+            todos.innerHTML=""
+            show()
+        }
+
+        function show(){
+            for(let i=0; i < my_array.length; i++){
+                let inpval=my_array[i]
+                todos.innerHTML+=`<li>${inpval} <button onclick="deletefromlist(${i})">x</button></li>`
+            }
+        }
+
+        function deletefromlist(index){
+            my_array.splice(index, 1)
+            todo.value=""
+            todos.innerHTML=""
+            show()
+        }
+    </script>
+</body>
+</html>

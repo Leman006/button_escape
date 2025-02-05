@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="sortOptions">
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+        <option value="bu">Bahadan ucuza</option>
+        <option value="ub">Ucuzdan Bahaya</option>
+    </select>
+    <h3 id="demo"></h3>
+    
+    <script>
+        const products = [
+            { name: "iphone 16", price: 2199 },
+            { name: "samsung S24", price: 2349 },
+            { name: "iphone 16 pro", price: 2899 },
+            { name: "xiaomi note 13", price: 450 },
+            { name: "samsung A55", price: 700 }
+        ];
+    
+        const sortOptions = document.getElementById('sortOptions');
+        const demo = document.getElementById('demo');
+        function displayProducts(sortedProducts) {
+            let output = "";
+            for (let i = 0; i < sortedProducts.length; i++) {
+                output += `${sortedProducts[i].name} - ${sortedProducts[i].price}AZN<br>`;
+            }
+            demo.innerHTML = output;
+        }
+        sortOptions.onchange = function () {
+            let sortedProducts;
+    
+            switch (this.value) {
+                case 'az': 
+                    sortedProducts = products.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case 'za':
+                    sortedProducts = products.sort((a, b) => b.name.localeCompare(a.name));
+                    break;
+                case 'bu': 
+                    sortedProducts = products.sort((a, b) => b.price - a.price);
+                    break;
+                case 'ub':
+                    sortedProducts = products.sort((a, b) => a.price - b.price);
+                    break;
+            }
+    
+            displayProducts(sortedProducts);
+        };
+    </script>
+    
+</body>
+</html>

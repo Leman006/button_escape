@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* #inputs{
+            display: flex;
+            flex-direction: column;
+        }
+        #num{
+            width: 200px;
+        } */
+    </style>
+</head>
+<body>
+    <input type="number" id="q">
+    <button id="btn">Goster</button>
+    <div id="inputs"></div>
+    <h3 id="answer"></h3>
+
+    <script>
+        let q= document.getElementById("q")
+        let btn= document.getElementById("btn")
+        let answer= document.getElementById("answer")
+        let inputs= document.getElementById("inputs")
+
+        btn.onclick= function(){
+            inputs.innerHTML = ''; 
+            for(i=0; i<q.value;i++){
+                inputs.innerHTML+=`${i+1} <input type="number" id="num${i}"><br/>`
+            }
+            inputs.innerHTML+=`<button onclick=topla()>topla</button>`
+        }
+
+        function topla(){
+            let s=0
+            for(j=0; j<q.value; j++){
+            let num= document.getElementById(`num${j}`)
+                s += parseInt(num.value) || 0; 
+                answer.innerHTML = `${s}`
+            }
+        }
+
+    </script>
+</body>
+</html>
