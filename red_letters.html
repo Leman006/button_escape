@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Letters</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        .input-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="input-container">
+    <input type="text" id="text" placeholder="Enter text">
+    <button onclick="highlightLetters()">OK</button>
+</div>
+
+<div id="output"></div>
+
+<script>
+    function highlightLetters() {
+        const text = document.getElementById('text').value;
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = '';
+
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.innerHTML = text[i];
+            if (text[i] !== ' ') {
+                span.classList.add('highlight');
+            }
+
+            const line = document.createElement('div');
+            line.innerHTML = text.slice(0, i) + `<span class="highlight">${text[i]}</span>` + text.slice(i + 1);
+            outputDiv.appendChild(line);
+        }
+    }
+</script>
+
+</body>
+</html>

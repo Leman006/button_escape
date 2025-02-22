@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="pos"></h3>
+    <h3 id="neg"></h3>
+    <h3 id="demo3"></h3>
+    <h3 id="demo4"></h3>
+    <h3 id="demo5"></h3>
+    <h3 id="demo6"></h3>
+    <ul id="demo7"></ul>
+
+    <script>
+        arr=[15,19,23,12,4,2,49,25,1,-20,103,-59,13]
+        let arr_2=["java","summer","spring","adelel","fero","imi","ibo"]
+        let arr_3=[
+    {name:"Feramiz",age:20,isMarried:false,id:1},
+    {name:"Mahmud",age:24,isMarried:true,id:2},
+    {name:"Adil", age:32, isMarried:true,id:3},
+    {name:"Imran", age:29, isMarried:false,id:4},
+    {name:"Ibrahim",age:19, isMarried:false,id:5}
+]
+        let pos=document.getElementById("pos")
+        let neg=document.getElementById("neg")
+        let demo3=document.getElementById("demo3")
+        let demo4=document.getElementById("demo4")
+        let demo5=document.getElementById("demo5")
+        let demo6=document.getElementById("demo6")
+        let demo7=document.getElementById("demo7")
+        let pos_arr=arr.filter(value =>  value>0)
+        pos.innerHTML=pos_arr
+        let neg_arr=arr.filter(value =>  value<0)
+        neg.innerHTML=neg_arr
+        let arr3=arr.filter(value =>  value>20)
+        demo3.innerHTML=arr3
+        let arr5 = arr_2.filter(word => word.length == 6);
+        demo5.innerHTML=arr5
+        let arr6 = arr_3.filter(person => person.isMarried === false);
+        demo6.innerHTML=arr6
+        for (let i = 0; i < arr6.length; i++) {
+            let li = document.createElement("li");
+            li.textContent = `${arr6[i].name}, ${arr6[i].age} yaşında`;
+            demo7.appendChild(li);
+        }
+        for (j in arr6) {
+            
+        }
+    </script>
+</body>
+</html>

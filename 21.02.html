@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h3 id="demo"></h3>
+    <h3 id="demo2"></h3>
+
+    <script>
+        const numbers=[10, 20, 30, 40, 50]
+        let demo=document.getElementById("demo")
+        let demo2=document.getElementById("demo2")
+
+        numbers.forEach(function(a, b, c){
+            demo.innerHTML+=a*10+" "
+        })
+        s=0
+        numbers.forEach(function(a, b, c){
+            s+=a
+        })
+        demo2.innerHTML=s
+    </script> -->
+
+    <h3 id="demo"></h3>
+    <script>
+        const users = [
+            { id: 1, name: "Emin", age: 25, role: "developer", salary: 5000 },
+            { id: 2, name: "Ali", age: 30, role: "designer", salary: 4000 },
+            { id: 3, name: "Leyla", age: 22, role: "developer", salary: 4500 },
+            { id: 4, name: "Aynur", age: 28, role: "marketing", salary: 3500 },
+            { id: 5, name: "Ramin", age: 35, role: "developer", salary: 6000 },
+            { id: 6, name: "Fidan", age: 27, role: "project manager", salary: 7000 },
+            { id: 7, name: "Murat", age: 40, role: "developer", salary: 8000 },
+            { id: 8, name: "Zeynab", age: 26, role: "designer", salary: 4200 },
+            { id: 9, name: "Sami", age: 32, role: "developer", salary: 5500 },
+            { id: 10, name: "Sara", age: 24, role: "marketing", salary: 3800 }
+        ];
+        let demo=document.getElementById("demo")
+        let s=0
+        users.forEach(function(a,b,c){
+            demo.innerHTML+=`Menim adim ${a.name}, yasim ${a.age}, maasim ${a.salary}</br>`
+            s+=a.salary
+        })
+        demo.innerHTML+=s
+    </script>
+</body>
+</html>

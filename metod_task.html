@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="task1"></h3>
+    <h3 id="task2"></h3>
+    <h3 id="task3"></h3>
+    <h3 id="task4"></h3>
+    <h3 id="task5"></h3>
+
+    <script>
+        let arr=[4,48,13,53,-29,103]
+        let task1= document.getElementById("task1")
+        let task2= document.getElementById("task2")
+        let task3= document.getElementById("task3")
+        let task4= document.getElementById("task4")
+        let task5= document.getElementById("task5")
+
+        let new_arr=[]
+        for(i in arr){
+            new_arr.push(arr[i]*2)
+        }
+        task1.innerHTML = new_arr;
+        let second_arr=[]
+        for(i in arr){
+            second_arr.push(arr[i]+100)
+        }
+        task2.innerHTML = second_arr;
+
+        let arr2=["apple", "banana", "orange", "fexreddin", "niyameddin"]
+        let letters=[]
+        for(i in arr2){
+            letters.push(arr2[i][0])
+        }
+        task3.innerHTML = letters;
+
+        let fourth_arr= []
+        for(i in arr2){
+            let part1 = arr2[i].toUpperCase();
+            let part2 = arr2[i].length;
+            fourth_arr.push([part1, part2])
+        }
+        task4.innerHTML= fourth_arr
+
+        let arr3=[
+        ["flag","dance",48],
+        [23,45,6,78,54,23,1,9,10,"azerbaijani"],
+        [true, "boolean", "turkish"],
+        ["adele","fero","imi","ibo",100],
+        ["java","summer","spring"]
+        ]
+        let lengths = [];
+        for (let i = 0; i < arr3.length; i++) {
+            lengths.push(arr3[i].length);
+        }
+        task5.innerHTML=lengths
+    </script>
+</body>
+</html>

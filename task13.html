@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+        label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+    color: #333;
+}
+
+
+input {
+    width: 94%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px
+}
+
+.password-container {
+    position: relative;
+}
+
+
+.password-container i {
+    position: absolute;
+    cursor: pointer;
+    left: 360px;
+    bottom: 20px;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <h3 id="output1"></h3>
+    <h3 id="output2"></h3>
+
+    <script>
+        let output1= document.getElementById("output1")
+        let output2= document.getElementById("output2")
+        let numbers= [3, 23, 5, 2, 6, 10, 11, 45]
+        let tek=[]
+        let cut=[]
+
+        for(let i in numbers){
+            if(numbers[i]%2==0){
+                cut.push(numbers[i])
+            }
+            else{
+                tek.push(numbers[i])
+            }
+        }
+        output1.innerHTML=cut
+        output2.innerHTML=tek
+        
+    </script>
+
+    <h3 id="demo"></h3>
+
+    <script>
+        let demo= document.getElementById("demo")
+        let numbers2=[3, -23, 5,2, -6, 10, -11]
+        let pos=[]
+        let neg=[]
+        for(let i in numbers2){
+            if(numbers2[i]<0){
+                neg.push(numbers2[i])
+            }
+            else{
+                pos.push(numbers2[i])
+            }
+        }
+        demo.innerHTML= pos
+        demo.innerHTML+= neg
+    </script>
+
+    <h3 id="demo2"></h3>
+
+    <script>
+        let demo2= document.getElementById("demo2")
+        let nums=[1,2,3,4,5]
+        let reversed=[]
+
+        let arr= nums.reverse()
+        demo2.innerHTML=arr
+    </script>
+
+    <h3 id="demo3"></h3>
+
+    <script>
+        let s= "Men JAVASCRIPT programlashdirma dilini oyrenirem"
+        let demo3= document.getElementById("demo3")
+        let k=0
+        for(i in s){
+        a=s[i].toLowerCase()
+            if(a=='a'){
+                k+=1
+            }
+        }
+        demo3.innerHTML=k
+    </script> -->
+
+    <!-- <form action="#" method="POST">
+        <label for="password">Sifre</label>
+        <div class="password-container">
+            <input type="password" id="password" name="password" required>
+            <i class="fa-regular fa-eye-slash" id="eye1"></i>
+            <i class="fa-regular fa-eye" id="eye2"></i>
+        </div>
+        <button type="submit" class="login-btn">Daxil ol</button>
+    </form>
+
+    <script>
+        let password=document.getElementById("password")
+        let eye2=document.getElementById("eye2")
+        eye1.style.display = "none";
+        eye2.onclick= function(){
+        if (password.type == 'password') {
+            password.type = 'text';
+            eye1.style.display = "block";
+            eye2.style.display = "none";
+        } 
+        else {
+            password.type = 'password';
+        }
+        }
+        eye1.onclick= function(){
+        if (password.type == 'password') {
+            password.type = 'text';
+            eye1.style.display = "block";
+            eye2.style.display = "none";
+        } 
+        else {
+            password.type = 'password';
+            eye2.style.display = "block";
+            eye1.style.display = "none";
+        }
+        }
+    </script> -->
+
+    <h3 id="demo"></h3>
+
+    <script>
+        let demo=document.getElementById("demo")
+        let arr=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        for(i in arr){
+            if(arr[i]%2==0){
+                demo.innerHTML+=arr[i]**2+' '
+            }
+        }
+    </script>
+</body>
+</html>

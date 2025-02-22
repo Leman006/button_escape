@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="answer"></p>
+
+    <script>
+        let answer= document.getElementById("answer")
+        for (let i=10; i>=1; i--){
+            answer.innerHTML+=`${i}</br>`
+        }
+        
+    </script>
+
+    <input type="text" id="num">
+    <button id="btn">tersine cevir</button>
+    <h3 id="answer2"></h3>
+
+    <script>
+        let answer2= document.getElementById("answer2")
+        let btn= document.getElementById("btn")
+        let num= document.getElementById("num")
+
+        btn.onclick= function(){
+            let reversedNum = ""
+            for (let i = num.value.length - 1; i >= 0; i--) {
+                reversedNum += num.value[i];
+            }
+            answer2.innerHTML = reversedNum;
+        }
+    </script>
+
+    <input type="text" id="num2">
+    <button id="btn2">cemi tap</button>
+    <h3 id="answer3"></h3>
+
+    <script>
+        let answer3= document.getElementById("answer3")
+        let btn2= document.getElementById("btn2")
+        let num2= document.getElementById("num2")
+
+        btn2.onclick= function(){
+            let sum = 0
+            for (let i = 0; i < num2.value.length; i++) {
+                sum += +num2.value[i];
+            }
+            answer3.innerHTML = sum;
+        }
+    </script>
+
+
+    <div id="output"></div>
+
+    <script>
+        const cars = [
+            { url: "https://media.istockphoto.com/id/1435226078/photo/front-of-a-white-bmw-m4-parked-on-a-street-with-trees-in-the-background.jpg?s=612x612&w=0&k=20&c=l1IupUrh-_Zbcse-hDkaUAh-qMD82hJspXjnN0IBZlg=", brand: "BMW", model: "M5 F10", year: 2016, color: "blue", price: 45000, isElectric: false },
+            { url: "https://bluesky-cogcms-prodb.cdn.imgeng.in/media/23kcymvw/mercedes-amg-gt-c192-stage-3840x3840-07-2023.jpg", brand: "Mercedes", model: "E63 AMG", year: 2018, color: "black", price: 55000, isElectric: false },
+            { url: "https://www.shutterstock.com/image-photo/kharkiv-ukraine-september-2019-audi-600nw-1923184661.jpg", brand: "Audi", model: "RS7", year: 2020, color: "red", price: 80000, isElectric: false },
+            { url: "https://images.unsplash.com/photo-1617704548623-340376564e68?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVzbGElMjBtb2RlbCUyMHN8ZW58MHx8MHx8fDA%3D", brand: "Tesla", model: "Model S", year: 2022, color: "white", price: 90000, isElectric: true },
+            { url: "https://media.istockphoto.com/id/1419988769/ru/%D1%84%D0%BE%D1%82%D0%BE/porsche-911-s-turbo.jpg?s=612x612&w=0&k=20&c=uCHTybKRX26GUV_p3dlYywnq111Iyt7DVZ2gtHh5B9g=", brand: "Porsche", model: "911 Turbo", year: 2019, color: "yellow", price: 150000, isElectric: false },
+            { url: "https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?cs=srgb&dl=pexels-adrian-dorobantu-989175-2127733.jpg&fm=jpg", brand: "Lamborghini", model: "Huracan", year: 2021, color: "green", price: 220000, isElectric: false },
+            { url: "https://www.amalgamcollection.com/cdn/shop/files/Wideedit_d6af3ea9-5cf8-4f4a-a372-0190e83a39ca_2000x850_crop_center.jpg?v=1705941011", brand: "Ferrari", model: "F8 Tributo", year: 2023, color: "red", price: 300000, isElectric: false },
+            { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPt6uWP9Bfx1eC6rwHjQctDFXw0UCRMVKusw&s", brand: "Ford", model: "Mustang Mach-E", year: 2022, color: "grey", price: 60000, isElectric: true },
+            { url: "https://t3.ftcdn.net/jpg/04/27/17/28/360_F_427172858_9kVQn6EGZKMKUjfyfy4bu3TmJQj1W3BW.jpg", brand: "Chevrolet", model: "Camaro ZL1", year: 2017, color: "orange", price: 58000, isElectric: false },
+            { url: "https://images.unsplash.com/photo-1551817280-6d59c77ce1b8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmlzc2FufGVufDB8fDB8fHww", brand: "Nissan", model: "GT-R R35", year: 2021, color: "silver", price: 120000, isElectric: false }
+        ];
+        let output= document.getElementById("output")
+        let carsmap = cars.map((item) => {
+        return `<div style="margin-bottom: 20px; border: 1px solid #ddd; padding: 10px;">
+            <img src="${item.url}" alt="${item.brand} ${item.model}" style="width: 60%; height: 300px; object-fit: cover;" />
+            <h2>${item.brand} ${item.model}</h2>
+            <p>Year: ${item.year}</p>
+            <p>Color: ${item.color}</p>
+            <p><del>Old Price: $${item.price}</del></p>
+            <p>New Price: $${item.price*0.9}</p>
+            <p>Electric: ${item.isElectric ? "Yes" : "No"}</p>
+        </div>`;
+    });
+        output.innerHTML=carsmap.join("")
+    </script>
+</body>
+</html>

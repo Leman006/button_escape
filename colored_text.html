@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Text</title>
+    </head>
+    <body>
+    <label for="text">İsim girin:</label>
+    <input type="text" id="text">
+    <button onclick="colorizeText()">Renklendir</button>
+
+    <div id="answer"></div>
+
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+            }
+
+        function colorizeText() {
+        const text = document.getElementById('text').value;
+        const answer = document.getElementById('answer');
+        answer.innerHTML = '';
+
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = text[i];
+            span.style.color = getRandomColor();
+            answer.appendChild(span);
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="radioContainer"></div>
+    <img id="displayedImage" src="1.jpg" alt="Displayed Image" style="width: 300px;">
+
+    <script>
+        const images = ['1.jpg', '2.jpg', '3.jpg'];
+    const radioContainer = document.getElementById('radioContainer');
+
+    for (let i = 0; i < images.length; i++) {
+    const radioButton = document.createElement('input');
+    radioButton.type = 'radio';
+    radioButton.name = 'image';
+    radioButton.value = images[i];
+    radioButton.onclick = () => changeImage(images[i]);
+
+    if (i === 0) {
+        radioButton.checked = true;
+    }
+
+    const label = document.createElement('label');
+    label.htmlFor = `image${i + 1}`;
+
+    radioContainer.appendChild(radioButton);
+    radioContainer.appendChild(label);
+    }
+
+    function changeImage(imageSrc) {
+    document.getElementById('displayedImage').src = imageSrc;
+    }
+    </script> -->
+
+    <div id="ticks"></div>
+    <h3 id="demo"></h3>
+    <button id="btn">OK</button>
+
+    <script>
+        let ticks = document.getElementById("ticks");
+        let demo = document.getElementById("demo");
+        let btn = document.getElementById("btn");
+
+        for (let i = 0; i < 5; i++) {
+            ticks.innerHTML += `<input id="checkbox${i}" type="checkbox" value="${i}"/> `;
+        }
+
+        btn.addEventListener("click", function() {
+            let selected = [];
+
+            for (let i = 0; i < 5; i++) {
+                let checkbox = document.getElementById(`checkbox${i}`);
+                if (checkbox.checked) {
+                    selected.push(i ); 
+                }
+            }
+
+            demo.innerHTML = `secilen ${selected.join(", ")}`;
+        });
+    </script>
+
+</body>
+</html>

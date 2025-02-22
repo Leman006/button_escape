@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="answer1"></h3>
+    <h3 id="answer2"></h3>
+    <h3 id="answer3"></h3>
+    <h3 id="answer4"></h3>
+    <h3 id="answer5"></h3>
+    <h3 id="answer6"></h3>
+    <h3 id="answer7"></h3>
+
+    <script>
+        let arr = ["Go", "Javascript", "Phyton", "NodeJs", "React", "Bootstrap"];
+        let answer1 = document.getElementById("answer1");
+        let answer2 = document.getElementById("answer2");
+        let answer3 = document.getElementById("answer3");
+        let answer4 = document.getElementById("answer4");
+        let answer5 = document.getElementById("answer5");
+        let answer6 = document.getElementById("answer6");
+        let answer7 = document.getElementById("answer7");
+
+        let result = arr.join('*'); 
+        result = result.replace('*Javascript', '**Javascript').replace('React*', 'React**'); 
+        answer1.innerHTML = result+ "</br>"; 
+
+        arr2=["php", "php", "css", "css","script", "script", "html", "html", "java"]
+        let uniqueArr = [];
+
+        for (let i = 0; i < arr2.length; i++) {
+            if (!uniqueArr.includes(arr2[i])) {
+                uniqueArr.push(arr2[i]);
+            }
+        }
+        answer2.innerHTML=uniqueArr
+
+        result2=[]
+        function bolunen(a,b){
+            for (let j = a; j <= b; j++) {
+                if (j % 4 == 0) {
+                    result2.push(j);
+                }
+            }
+            return result2
+        }
+        answer3.innerHTML=bolunen(1,20)
+
+        function isarr(a){
+            if(Array.isArray(a)){
+                return "it is array"
+            }
+            else{
+                return "it is not array"
+            }
+        }
+        answer4.innerHTML=isarr(54)
+
+
+        let arr3 = [34, 2, 6, 3, 12, 9, 65, 39, 47, 103, 81];
+
+        let min = arr3[0];
+        let max = arr3[0];
+
+        for (let i = 1; i < arr3.length; i++) {
+        if (arr3[i] < min) {
+            min = arr3[i];
+        }
+        if (arr[i] > max) {
+            max = arr3[i];
+        }
+        }
+        answer5.innerHTML=`min: ${min}, max: ${max}`
+
+
+        let arr5=["Aytac", "Amil", "Teyyar","Esmer", "Leman", "Revan"] 
+        for(i in arr5){
+            if(arr5[i].includes("e") || arr5[i].includes("E")){
+                answer6.innerHTML+=arr5[i] + " "
+            }
+        }
+
+        let arr6 =["Blue","Orange","Red","Violet"] 
+        let result3= []
+        for(i in arr6){
+            let part1 = arr6[i];
+            let part2 = arr6[i].length;
+            result3.push([part1, part2])
+        }
+        answer7.innerHTML= result3
+        console.log(result3)
+
+    </script>
+</body>
+</html>
